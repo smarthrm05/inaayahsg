@@ -1,3 +1,5 @@
+// @/lib/constants.ts
+
 export const WHATSAPP_LINK =
   'https://wa.me/6590620969?text=Assalamualaikum%2C%20I%20would%20like%20to%20know%20more%20about%20Inaayah%20SG';
 
@@ -24,15 +26,15 @@ export const heroImages = [
 export const aboutImage =
   'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992903844_b6ba5147.jpg';
 
+// ✅ GALLERY IMAGES - Updated with local paths
 export const galleryImages = [
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992925255_21185095.jpg', caption: 'Community Iftar Program' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992925166_5dbdcbfd.jpg', caption: 'Waqaf Water Well Project' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992926749_8ac54661.png', caption: 'Quran Distribution' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992926046_ed55c985.jpg', caption: 'Madrasah Development' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992929094_fae2ff1f.png', caption: 'Korban Distribution' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992931733_a88cbb54.png', caption: 'Hafiz Education Support' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992931492_f1c539db.png', caption: 'Masjid Construction' },
-  { src: 'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992929335_66388c5e.jpg', caption: 'Braille Quran Initiative' },
+  { src: '/img/img1.jpeg', caption: 'Community Iftar Program' },
+  { src: '/img/img2.jpeg', caption: 'Waqaf Water Well Project' },
+  { src: '/img/img3.jpeg', caption: 'Quran Distribution' },
+  { src: '/img/img4.jpeg', caption: 'Madrasah Development' },
+  { src: '/img/img5.jpeg', caption: 'Korban Distribution' },
+  { src: '/img/img7.jpeg', caption: 'Masjid Construction' },
+  { src: '/img/img8.JPEG', caption: 'Braille Quran Initiative' },
 ];
 
 export const services = [

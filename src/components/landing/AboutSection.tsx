@@ -4,7 +4,6 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const focusAreas = [
   {
-    title: 'Quranic Projects', 
     desc: 'Printing, distribution & teaching',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -55,23 +54,17 @@ const AboutSection: React.FC = () => {
   return (
     <section 
       id="about" 
-      className="py-24 lg:py-32" 
+      className="pt-32 lg:pt-40 pb-24"
       style={{ 
         backgroundColor: '#FFFFFF',
-        border: 'none',
-        borderTop: 'none',
-        borderBottom: 'none',
-        boxShadow: 'none',
-        marginTop: 0,
-        paddingTop: 0,
       }}
     >
       <div 
         ref={ref} 
         className="max-w-7xl mx-auto px-6 lg:px-10"
-        style={{ border: 'none' }}
       >
         <div className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          
           {/* Left: Image */}
           <div className="relative">
             <div
@@ -85,7 +78,8 @@ const AboutSection: React.FC = () => {
                 style={{ maxHeight: '580px' }}
               />
             </div>
-            {/* Decorative element */}
+
+            {/* Decorative elements */}
             <div
               className="absolute -bottom-6 -right-6 w-32 h-32 rounded-3xl -z-10"
               style={{ backgroundColor: 'rgba(201,169,97,0.15)' }}
@@ -109,23 +103,16 @@ const AboutSection: React.FC = () => {
               About Us
             </div>
 
-            <h2
-              className="font-heading font-bold text-4xl lg:text-5xl mb-6 leading-tight"
-            >
+            <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 leading-tight">
               <span style={{ color: '#C9A961' }}>Who We </span>
               <span style={{ color: '#2C2C2C' }}>Are</span>
             </h2>
 
-            <p
-              className="font-body text-lg leading-relaxed mb-4"
-              style={{ color: '#6B6B6B' }}
-            >
+            <p className="font-body text-lg leading-relaxed mb-4" style={{ color: '#6B6B6B' }}>
               Inaayah SG is a Singapore-based online donation platform that connects people with meaningful sadaqah opportunities around the world.
             </p>
-            <p
-              className="font-body text-lg leading-relaxed mb-10"
-              style={{ color: '#6B6B6B' }}
-            >
+
+            <p className="font-body text-lg leading-relaxed mb-10" style={{ color: '#6B6B6B' }}>
               Inaayah SG provides an accessible and trustworthy platform for those who wish to partake in meaningful sadaqah programmes and initiatives. Our sadaqah platforms and initiatives are designed to make participation simple, clear and transparent for everyone.
             </p>
 
@@ -154,6 +141,7 @@ const AboutSection: React.FC = () => {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </div>
