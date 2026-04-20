@@ -1,6 +1,30 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+/* ===== LENIS SMOOTH SCROLL CSS RESET ===== */
+html.lenis,
+html.lenis body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+  overflow-x: hidden !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+/* ===== END LENIS CSS ===== */
 
 @tailwind base;
 @tailwind components;
@@ -93,8 +117,17 @@
     @apply border-border;
   }
 
+  /* 
+    ⚠️ Lenis akan override scroll-behavior via class .lenis
+    Native smooth scroll hanya fallback jika Lenis tidak aktif 
+  */
   html {
     scroll-behavior: smooth;
+  }
+  
+  /* Ketika Lenis aktif, paksa scroll-behavior: auto */
+  html.lenis {
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -107,7 +140,6 @@
     @apply font-mono;
   }
 }
-
 
 .markdown-editor {
   @apply font-mono text-base leading-relaxed;
