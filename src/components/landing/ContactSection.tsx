@@ -50,8 +50,9 @@ const ContactSection: React.FC = () => {
             Get in Touch
           </div>
 
-          <h2 className="text-4xl lg:text-5xl font-bold mb-5 text-[#2C2C2C]">
-            Contact Us
+          <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 leading-tight">
+            <span style={{ color: '#6B4A34' }}>Contact </span>
+            <span style={{ color: '#D9A07B' }}>Us</span>
           </h2>
 
           <p className="text-lg max-w-2xl mx-auto text-[#6B6B6B]">

@@ -36,59 +36,39 @@ const Footer: React.FC = () => {
               A trusted Singapore-based sadaqah and waqaf platform empowering Muslims to give with confidence and make a lasting impact.
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
+            {/* WhatsApp Buttons */}
+            <div className="flex flex-col gap-3 mt-4">
 
-              {/* Facebook */}
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ backgroundColor: 'rgba(0,0,0,0.05)' }}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#6B4A34">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ backgroundColor: 'rgba(0,0,0,0.05)' }}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B4A34" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-
-              {/* WhatsApp 1 */}
+              {/* WhatsApp Button 1 */}
               <a
                 href="https://wa.me/6590620969"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ backgroundColor: '#25D366' }}
+                className="flex items-center justify-center gap-3 px-5 py-3 rounded-full text-white font-medium transition-all duration-300 hover:scale-[1.02]"
+                style={{ backgroundColor: '#8B5E3C' }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207z"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16.04 2C8.29 2 2 8.29 2 16.04c0 2.83.84 5.47 2.29 7.69L2 30l6.44-2.27a13.94 13.94 0 007.6 2.21h.01c7.75 0 14.04-6.29 14.04-14.04C30.09 8.29 23.8 2 16.04 2zm0 25.53h-.01a11.45 11.45 0 01-5.84-1.6l-.42-.25-3.82 1.35 1.36-3.72-.27-.43a11.48 11.48 0 01-1.77-6.12c0-6.34 5.16-11.5 11.5-11.5 3.07 0 5.96 1.2 8.13 3.37a11.44 11.44 0 013.37 8.13c0 6.34-5.16 11.5-11.5 11.5zm6.32-8.63c-.35-.18-2.07-1.02-2.39-1.13-.32-.12-.55-.18-.78.18-.23.35-.89 1.13-1.09 1.36-.2.23-.4.26-.75.09-.35-.18-1.49-.55-2.83-1.75-1.04-.93-1.74-2.07-1.95-2.42-.2-.35-.02-.54.15-.71.16-.16.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.66c-.23 0-.6.09-.92.43-.32.35-1.21 1.18-1.21 2.87 0 1.69 1.24 3.32 1.41 3.55.18.23 2.44 3.72 5.91 5.21.83.36 1.47.57 1.97.73.83.26 1.58.22 2.18.13.67-.1 2.07-.85 2.36-1.68.29-.83.29-1.54.2-1.68-.08-.14-.31-.23-.66-.41z"/>
+              </svg>
+                +65 9062 0969
               </a>
 
-              {/* WhatsApp 2 */}
+              {/* WhatsApp Button 2 */}
               <a
                 href="https://wa.me/6592426981"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ backgroundColor: '#25D366' }}
+                className="flex items-center justify-center gap-3 px-5 py-3 rounded-full font-medium border transition-all duration-300 hover:scale-[1.02]"
+                style={{
+                  borderColor: '#8B5E3C',
+                  color: '#8B5E3C',
+                  backgroundColor: 'transparent'
+                }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475z"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16.04 2C8.29 2 2 8.29 2 16.04c0 2.83.84 5.47 2.29 7.69L2 30l6.44-2.27a13.94 13.94 0 007.6 2.21h.01c7.75 0 14.04-6.29 14.04-14.04C30.09 8.29 23.8 2 16.04 2zm0 25.53h-.01a11.45 11.45 0 01-5.84-1.6l-.42-.25-3.82 1.35 1.36-3.72-.27-.43a11.48 11.48 0 01-1.77-6.12c0-6.34 5.16-11.5 11.5-11.5 3.07 0 5.96 1.2 8.13 3.37a11.44 11.44 0 013.37 8.13c0 6.34-5.16 11.5-11.5 11.5zm6.32-8.63c-.35-.18-2.07-1.02-2.39-1.13-.32-.12-.55-.18-.78.18-.23.35-.89 1.13-1.09 1.36-.2.23-.4.26-.75.09-.35-.18-1.49-.55-2.83-1.75-1.04-.93-1.74-2.07-1.95-2.42-.2-.35-.02-.54.15-.71.16-.16.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.66c-.23 0-.6.09-.92.43-.32.35-1.21 1.18-1.21 2.87 0 1.69 1.24 3.32 1.41 3.55.18.23 2.44 3.72 5.91 5.21.83.36 1.47.57 1.97.73.83.26 1.58.22 2.18.13.67-.1 2.07-.85 2.36-1.68.29-.83.29-1.54.2-1.68-.08-.14-.31-.23-.66-.41z"/>
+              </svg>
+                +65 9242 6981
               </a>
 
             </div>
