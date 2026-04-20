@@ -26,7 +26,7 @@ export const heroImages = [
 export const aboutImage =
   'https://d64gsuwffb70l.cloudfront.net/69db7fd79aa9081721dd97f1_1775992903844_b6ba5147.jpg';
 
-// ✅ GALLERY IMAGES - Updated with local paths
+// ✅ GALLERY IMAGES
 export const galleryImages = [
   { src: '/img/img1.jpeg', caption: 'Community Iftar Program' },
   { src: '/img/img2.jpeg', caption: 'Waqaf Water Well Project' },

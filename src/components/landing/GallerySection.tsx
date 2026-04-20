@@ -37,7 +37,7 @@ const GallerySection: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-24 lg:py-32" style={{ backgroundColor: '#F5EDE4' }}>
+    <section id="gallery" className="py-24 lg:py-32" style={{ backgroundColor: '#FCE8DD' }}>
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header */}
@@ -59,7 +59,7 @@ const GallerySection: React.FC = () => {
 
           <p
             className="font-body text-lg max-w-2xl mx-auto leading-relaxed"
-            style={{ color: '#6B6B6B' }}
+            style={{ color: '#000000' }}
           >
             Witness the real impact of your generosity through our projects around the world.
           </p>

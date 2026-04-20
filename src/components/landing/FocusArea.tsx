@@ -33,8 +33,7 @@ const FocusArea: React.FC = () => {
   return (
     <section
       id="focus"
-      className="relative py-24 lg:py-32"
-      style={{ backgroundColor: "#F8F5F1" }}
+      className="relative py-24 lg:py-32 bg-white"
     >
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -63,7 +62,7 @@ const FocusArea: React.FC = () => {
           </h2>
 
           {/* Desc */}
-          <p className="font-body text-lg max-w-2xl mx-auto leading-relaxed text-[#00000]/70">
+          <p className="font-body text-lg max-w-2xl mx-auto leading-relaxed text-black/70">
             Rooted in faith and driven by compassion, our initiatives are
             dedicated to uplifting communities and creating lasting impact where
             it matters most.
@@ -82,7 +81,8 @@ const FocusArea: React.FC = () => {
                 duration: 0.7,
                 ease,
               }}
-              className="group overflow-hidden rounded-3xl bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+              className="group overflow-hidden rounded-3xl border border-[#EDE7E0] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+              style={{ backgroundColor: "#F8F5F1" }}
             >
               {/* IMAGE */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -99,7 +99,7 @@ const FocusArea: React.FC = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-[#00000]/70">
+                <p className="text-sm leading-relaxed text-black/70">
                   {item.desc}
                 </p>
               </div>
