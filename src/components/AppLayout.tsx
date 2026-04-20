@@ -5,7 +5,7 @@ import Navbar from './landing/Navbar';
 import HeroSection from './landing/HeroSection';
 import AboutSection from './landing/AboutSection';
 import ServicesSection from './landing/ServicesSection';
-import WhyChooseUs from './landing/WhyChooseUs';
+import FocusArea from './landing/FocusArea';
 import GallerySection from './landing/GallerySection';
 import WhatsAppCTA from './landing/WhatsAppCTA';
 import ContactSection from './landing/ContactSection';
@@ -76,7 +76,7 @@ const AppLayout: React.FC = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <WhyChooseUs />
+      <FocusArea />
       <GallerySection />
       <WhatsAppCTA />
       <ContactSection />

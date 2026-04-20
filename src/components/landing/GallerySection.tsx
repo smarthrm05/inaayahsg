@@ -31,7 +31,6 @@ const GallerySection: React.FC = () => {
     }
   }, [lightboxIndex]);
 
-  // Masonry-like layout with varying heights
   const getHeightClass = (i: number) => {
     const pattern = [360, 280, 320, 300, 360, 260, 340, 280];
     return pattern[i % pattern.length];
@@ -40,6 +39,7 @@ const GallerySection: React.FC = () => {
   return (
     <section id="gallery" className="py-24 lg:py-32" style={{ backgroundColor: '#F5EDE4' }}>
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-10">
+
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div
@@ -51,17 +51,17 @@ const GallerySection: React.FC = () => {
           >
             Our Gallery
           </div>
-          <h2
-            className="font-heading font-bold text-4xl lg:text-5xl mb-5 leading-tight"
-            style={{ color: '#2C2C2C' }}
-          >
-            Moments of Impact
+
+          <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 leading-tight">
+            <span style={{ color: '#6B4A34' }}>Moments of </span>
+            <span style={{ color: '#D9A07B' }}>Kindness</span>
           </h2>
+
           <p
             className="font-body text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: '#6B6B6B' }}
           >
-            Witness the real impact of your generosity through these heartwarming moments from our projects around the world.
+            Witness the real impact of your generosity through our projects around the world.
           </p>
         </div>
 
@@ -81,38 +81,16 @@ const GallerySection: React.FC = () => {
             >
               <img
                 src={img.src}
-                alt={img.caption}
+                alt=""
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                <p className="font-body text-white text-lg font-medium">{img.caption}</p>
-              </div>
+
+              {/* subtle hover effect (no text) */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500" />
             </div>
           ))}
         </div>
-
-        {/* View More */}
-        {!showAll && galleryImages.length > 6 && (
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setShowAll(true)}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-body font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              style={{
-                backgroundColor: 'transparent',
-                color: '#8B6F47',
-                border: '2px solid #8B6F47',
-              }}
-            >
-              View More
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14" />
-                <path d="M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Lightbox */}
@@ -121,7 +99,7 @@ const GallerySection: React.FC = () => {
           className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={closeLightbox}
         >
-          {/* Close button */}
+          {/* Close */}
           <button
             onClick={closeLightbox}
             className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-300"
@@ -149,12 +127,9 @@ const GallerySection: React.FC = () => {
           >
             <img
               src={galleryImages[lightboxIndex].src}
-              alt={galleryImages[lightboxIndex].caption}
+              alt=""
               className="max-w-full max-h-[80vh] object-contain rounded-2xl"
             />
-            <p className="text-center font-body text-white text-lg mt-4">
-              {galleryImages[lightboxIndex].caption}
-            </p>
           </div>
 
           {/* Next */}

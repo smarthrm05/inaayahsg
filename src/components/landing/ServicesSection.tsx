@@ -55,14 +55,16 @@ const ServicesSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative py-24 lg:py-32" style={{ backgroundColor: '#F5F0E8' }}>
+    <section
+      id="services"
+      className="relative py-24 lg:py-32"
+      style={{ backgroundColor: '#F5F0E8' }}
+    >
       {/* Wave Divider - Top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none" style={{ height: '120px' }}>
         <svg
           className="relative block w-full h-full"
           viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <path
@@ -77,8 +79,6 @@ const ServicesSection: React.FC = () => {
         <svg
           className="relative block w-full h-full"
           viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <path
@@ -89,14 +89,31 @@ const ServicesSection: React.FC = () => {
       </div>
 
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+        
         {/* Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2
-            className="font-heading font-bold text-4xl lg:text-5xl mb-4 leading-tight"
-            style={{ color: '#8B6F47' }}
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          {/* ✅ BADGE */}
+          <div
+            className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 font-body text-sm font-medium tracking-wider uppercase"
+            style={{
+              backgroundColor: 'rgba(139,111,71,0.08)',
+              color: '#8B6F47',
+            }}
           >
             Our Services
-          </h2>
+          </div>
+
+          {/* Title */}
+            <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 leading-tight">
+              <span style={{ color: '#6B4A34' }}>Built on</span>
+              <span style={{ color: '#D9A07B' }}> Faith and Care</span>
+            </h2>
+
+          {/* Subtitle */}
           <p
             className="font-body text-base max-w-2xl mx-auto leading-relaxed"
             style={{ color: '#6B7280' }}
@@ -115,29 +132,33 @@ const ServicesSection: React.FC = () => {
               }`}
               style={{
                 transitionDelay: isVisible ? `${i * 80}ms` : '0ms',
-                boxShadow: hoveredCard === i 
-                  ? '0 20px 60px rgba(139,111,71,0.15)' 
-                  : '0 2px 8px rgba(0,0,0,0.04)',
-                backgroundColor: '#FFFFFF',
-                transform: hoveredCard === i 
-                  ? 'translateY(-12px) scale(1.02)' 
-                  : 'translateY(0) scale(1)',
+                boxShadow:
+                  hoveredCard === i
+                    ? '0 20px 60px rgba(139,111,71,0.15)'
+                    : '0 2px 8px rgba(0,0,0,0.04)',
+                transform:
+                  hoveredCard === i
+                    ? 'translateY(-12px) scale(1.02)'
+                    : 'translateY(0) scale(1)',
               }}
               onMouseEnter={() => setHoveredCard(i)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Icon */}
               <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-all duration-500 ease-out mx-auto"
-                style={{ 
+                className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-500"
+                style={{
                   backgroundColor: hoveredCard === i ? '#8B6F47' : '#F5EDE4',
-                  transform: hoveredCard === i ? 'scale(1.1) rotate(5deg)' : 'scale(1) rotate(0)',
+                  transform:
+                    hoveredCard === i
+                      ? 'scale(1.1) rotate(5deg)'
+                      : 'scale(1)',
                 }}
               >
                 <div
                   style={{
-                    filter: hoveredCard === i ? 'brightness(0) invert(1)' : 'none',
-                    transition: 'filter 0.3s ease',
+                    filter:
+                      hoveredCard === i ? 'brightness(0) invert(1)' : 'none',
                   }}
                 >
                   <ServiceIcon name={service.icon} />
@@ -145,24 +166,12 @@ const ServicesSection: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h3
-                className="font-heading font-semibold text-lg mb-1 transition-all duration-300"
-                style={{ 
-                  color: '#2C2C2C',
-                  transform: hoveredCard === i ? 'translateY(-2px)' : 'translateY(0)',
-                }}
-              >
+              <h3 className="font-heading font-semibold text-lg mb-1 text-[#2C2C2C]">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p 
-                className="font-body text-sm leading-relaxed transition-all duration-300" 
-                style={{ 
-                  color: hoveredCard === i ? '#6B6B6B' : '#888888',
-                  transform: hoveredCard === i ? 'translateY(-2px)' : 'translateY(0)',
-                }}
-              >
+              <p className="font-body text-sm text-[#888888]">
                 {service.description}
               </p>
             </div>

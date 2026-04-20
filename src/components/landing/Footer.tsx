@@ -8,11 +8,10 @@ const Footer: React.FC = () => {
   };
 
   const quickLinks = [
-    { label: 'Quran Services', href: '#services' },
-    { label: 'Waqaf Projects', href: '#services' },
-    { label: 'Korban / Qurban', href: '#services' },
-    { label: 'Hafiz Education', href: '#services' },
-    { label: 'Gallery', href: '#gallery' },
+    { label: 'Quranic Projects', href: '#focusarea' },
+    { label: 'Khatamul Quran', href: '#focusarea' },
+    { label: 'Waqaf Projects', href: '#focusarea' },
+    { label: 'Madrasah and Masjid Developments', href: '#focusarea' },
   ];
 
   return (
@@ -21,16 +20,16 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1: Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                </svg>
-              </div>
-              <span className="font-heading text-xl font-bold text-white tracking-wide">
-                INAAYAH SG
-              </span>
-            </div>
+            <div className="flex items-center gap-3 mb-5">
+            <img
+              src="/img/logo.png"
+              alt="Inaayah Logo"
+              className="w-10 h-10 object-contain shrink-0"
+            />
+            <span className="font-heading text-xl font-bold text-white tracking-wide leading-none">
+              INAAYAH SG
+            </span>
+          </div>
             <p className="font-body text-base leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
               A trusted Singapore-based sadaqah and waqaf platform empowering Muslims to give with confidence and make a lasting impact.
             </p>
@@ -101,7 +100,7 @@ const Footer: React.FC = () => {
           {/* Column 3: Services */}
           <div>
             <h4 className="font-heading font-semibold text-base text-white mb-5 uppercase tracking-wider">
-              Services
+              Focus Area
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, i) => (
@@ -136,20 +135,16 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="tel:+6590620969"
+
                   className="font-body text-base transition-colors duration-300 hover:text-white"
                   style={{ color: 'rgba(255,255,255,0.65)' }}
                 >
-                  +65 9062 0969
+                  +65 9062 0969 / +65 9242 6981
                 </a>
               </li>
               <li>
                 <span className="font-body text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   Singapore
-                </span>
-              </li>
-              <li>
-                <span className="font-body text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
-                  Mon – Fri, 9 AM – 6 PM
                 </span>
               </li>
             </ul>

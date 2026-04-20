@@ -132,14 +132,14 @@ const HeroSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="animate-fade-up inline-flex items-center gap-3 px-8 py-4 font-body font-semibold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]"
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  color: '#8B6F47',
+                  backgroundColor: '#8B6F47',
+                  color: '#ffff',
                   borderRadius: '50px',
                   animationDelay: '700ms',
                   boxShadow: '0 10px 30px -10px rgba(0,0,0,0.2)',
                 }}
               >
-                Contact via WhatsApp
+                Join With Us
               </a>
             </div>
           </div>
