@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
                     animationDelay: '400ms',
                   }}
                 >
-                  <span style={{ color: '#C9A961' }}> Can Change a Life</span>
+                  <span style={{ color: '#C9A961' }}> Can Change Countless Life</span>
                 </h1>
               </div>
 
@@ -141,15 +141,15 @@ const HeroSection: React.FC = () => {
               >
                Connect With Us
                 {/* 🔥 Arrow Icon */}
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-  >
-    <path d="M5 12h14M13 5l7 7-7 7" />
-  </svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
               </a>
             </div>
           </div>
