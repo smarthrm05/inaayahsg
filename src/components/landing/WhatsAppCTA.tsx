@@ -22,16 +22,35 @@ const WhatsAppCTA: React.FC = () => {
           className="h-full w-full object-cover object-center"
         />
 
-        {/* Desktop overlay */}
+        {/* Desktop overlay - kotak foto disamarkan */}
         <div
           className="hidden md:block absolute inset-0"
           style={{
-            background:
-              "linear-gradient(to right, rgba(248,245,241,0.95) 0%, rgba(248,245,241,0.82) 38%, rgba(248,245,241,0.12) 75%, transparent 100%)",
+            background: `
+              linear-gradient(
+                to right,
+                rgba(248,245,241,0.98) 0%,
+                rgba(248,245,241,0.92) 26%,
+                rgba(248,245,241,0.72) 48%,
+                rgba(248,245,241,0.28) 74%,
+                rgba(248,245,241,0.06) 100%
+              )
+            `,
           }}
         />
 
-        {/* Mobile focused overlay */}
+        {/* Soft blur transition desktop */}
+        <div
+          className="hidden md:block absolute inset-y-0 left-0 w-24"
+          style={{
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            background:
+              "linear-gradient(to right, rgba(248,245,241,0.55), transparent)",
+          }}
+        />
+
+        {/* Mobile overlay */}
         <div
           className="absolute inset-0 md:hidden"
           style={{
@@ -57,6 +76,7 @@ const WhatsAppCTA: React.FC = () => {
               mb-4
               text-white md:text-[#4A2E1F]
               drop-shadow-[0_10px_30px_rgba(0,0,0,0.65)]
+              md:drop-shadow-none
             "
           >
             Every Good Deed Begins
@@ -77,6 +97,7 @@ const WhatsAppCTA: React.FC = () => {
               text-base sm:text-lg md:text-xl
               text-white/95 md:text-[#4A2E1F]/95
               drop-shadow-[0_4px_14px_rgba(0,0,0,0.6)]
+              md:drop-shadow-none
             "
           >
             Give with purpose. Start your sadaqah journey today.
