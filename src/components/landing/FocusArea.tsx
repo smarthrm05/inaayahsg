@@ -64,7 +64,7 @@ const FocusArea: React.FC = () => {
           {/* Desc */}
           <p className="font-body text-lg max-w-2xl mx-auto leading-relaxed text-black/70">
             Rooted in faith and driven by compassion, our initiatives are
-            dedicated to uplifting communities and creating lasting impact where
+            dedicated in uplifting communities and creating lasting impact where
             it matters most.
           </p>
         </motion.div>

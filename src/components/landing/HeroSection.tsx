@@ -139,7 +139,7 @@ const HeroSection: React.FC = () => {
                   boxShadow: '0 10px 30px -10px rgba(0,0,0,0.2)',
                 }}
               >
-                Join With Us
+               Connect With Us
                 
               </a>
             </div>
