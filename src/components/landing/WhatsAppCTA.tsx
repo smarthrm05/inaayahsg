@@ -55,17 +55,16 @@ const WhatsAppCTA: React.FC = () => {
             transition={{ duration: 0.6, ease }}
             className="text-2xl md:text-4xl font-bold text-[#4A2E1F] leading-tight"
           >
-            Start Your Sadaqah Today
+            Every Good Deed Begins
             <br />
             <span className="text-[#C97B50]">
-              Even a Small Act Matters
+              with a First Step
             </span>
           </motion.h2>
 
           {/* Subtext */}
           <p className="mt-4 text-[#4A2E1F]/80 text-sm md:text-base">
-            Join hundreds of donors making real impact.  
-            Simple, fast, and fully transparent.
+            Give with purpose. Start your sadaqah journey today  
           </p>
 
           {/* CTA */}
