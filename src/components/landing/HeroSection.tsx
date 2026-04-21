@@ -91,7 +91,7 @@ const HeroSection: React.FC = () => {
                   style={{
                     fontSize: 'clamp(2.7rem, 5.5vw, 4.5rem)',
                     color: '#FFFFFF',
-                    textShadow: '0 8px 30px rgba(0,0,0,0.4)',
+                    textShadow: '0 50px 50px rgba(0,0,0,0.4)',
                     animationDelay: '250ms',
                   }}
                 >
@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
                     animationDelay: '400ms',
                   }}
                 >
-                  <span style={{ color: '#C9A961' }}> Can Change Countless Life</span>
+                  <span style={{ color: '#ffc53d' }}> Can Change Countless Lives</span>
                 </h1>
               </div>
 
