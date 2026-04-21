@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
                     animationDelay: '250ms',
                   }}
                 >
-                  A Small Act
+                  One Small Act
                 </h1>
               </div>
 

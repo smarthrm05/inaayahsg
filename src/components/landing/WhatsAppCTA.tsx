@@ -4,80 +4,96 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-/* ✅ FIXED WhatsApp Icon (full logo) */
 const WhatsAppIcon = ({ className = "h-5 w-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-  >
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z" />
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
   </svg>
 );
 
 const WhatsAppCTA: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-[#F8F5F1] py-24 md:py-32">
+    <section className="relative overflow-hidden py-20 md:py-32 bg-[#FAF7F2]">
 
-      {/* IMAGE RIGHT */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-full md:w-1/2 lg:w-[45%]">
+      {/* 🔥 Background Image (COOL TONE) */}
+      <div className="absolute inset-0">
         <img
           src="/img/image_2.jpg"
-          alt="Impact"
-          className="h-full w-full object-cover object-left"
+          alt="donation"
+          className="
+            w-full h-full object-cover
+            scale-105
+            opacity-80 md:opacity-150
+          "
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F1] via-[#F8F5F1]/70 to-transparent" />
+
+        {/* 🔥 Dark overlay */}
+        <div className="absolute inset-0 bg-black/40 md:bg-black/40" />
+
+        {/* 🔥 Optional gradient focus */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
 
-      {/* CONTENT */}
-      <div className="container relative">
-        <div className="max-w-2xl text-center md:text-left">
+      {/* Content */}
+      <div className="relative container flex justify-center">
+        <div className="
+          max-w-xl text-center 
+          bg-white/90 backdrop-blur-md 
+          rounded-3xl 
+          p-6 md:p-10 
+          shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+        ">
+
+          {/* Badge */}
+          <div className="mb-4 inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium">
+            ● INAAYAH SG
+          </div>
 
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease }}
-            className="font-heading font-bold text-4xl lg:text-5xl mb-5 leading-tight"
-            style={{ color: '#6B4A34' }}
+            transition={{ duration: 0.6, ease }}
+            className="text-2xl md:text-4xl font-bold text-[#4A2E1F] leading-tight"
           >
-            Every Good Deed Begins
+            Start Your Sadaqah Today
             <br />
-            <span className="text-[#D9A07B]">
-              with a First Step
+            <span className="text-[#C97B50]">
+              Even a Small Act Matters
             </span>
           </motion.h2>
 
           {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.7, ease }}
-            className="mb-10 text-lg md:text-xl text-[#6B4A34]/80"
-          >
-            Give with purpose. Start your sadaqah journey today.
-          </motion.p>
+          <p className="mt-4 text-[#4A2E1F]/80 text-sm md:text-base">
+            Join hundreds of donors making real impact.  
+            Simple, fast, and fully transparent.
+          </p>
 
           {/* CTA */}
           <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6, ease }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full 
-                       bg-[#25D366] text-white font-body font-semibold text-base
-                       shadow-[0_10px_30px_rgba(37,211,102,0.4)]
-                       transition-all duration-300 
-                       hover:scale-105 hover:shadow-[0_15px_40px_rgba(37,211,102,0.5)]"
+            className="
+              mt-6 inline-flex items-center gap-3
+              px-7 py-3 md:px-9 md:py-4
+              bg-[#25D366]
+              text-white font-semibold
+              rounded-full
+              shadow-[0_8px_25px_rgba(37,211,102,0.35)]
+              hover:shadow-[0_12px_35px_rgba(37,211,102,0.45)]
+              transition-all duration-300
+            "
           >
-            <WhatsAppIcon className="h-5 w-5" />
-            Chat with Admin on WhatsApp
+            <WhatsAppIcon />
+            Start via WhatsApp Now
           </motion.a>
+
+          {/* Trust */}
+          <p className="mt-4 text-xs text-gray-500">
+            100% secure • No spam • Direct admin support
+          </p>
 
         </div>
       </div>
